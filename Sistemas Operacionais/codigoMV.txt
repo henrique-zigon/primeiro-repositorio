@@ -1,0 +1,31 @@
+free m			-ver dados de memoria e swap
+cat /proc/meminfo	-dados da memoria
+cat /proc/cpuinfo	-dados da cpu
+cat /etc/group		-ver os grupos
+cat /etc/shadow		-
+groups "nomedousuario"	-ver os grupos que ele possui
+who/whoami		-diz quem é voce
+ps			-ver programas ativos
+ps -f			-mostra os processos "filhos" do user atual
+sudo ps -f		-mostra os processos "filhos" do user root
+top			-parecido ao gerenciador de tarefas do windows
+	"q" para sair
+df			-informações do disco
+df -h			-info do disco, só q em M
+
+sudo apt install openafs-client		-Instalar fs
+
+df			-como esta sendo usado o disco
+df -T			-igual, com o tipo 
+lsblk -f		-mostra as partições do disco	
+
+
+
+
+kill -9 ___		-mata o processo dps do -9
+ccrypt _____		-criptografa arquivo
+cat>______		-cria um arquivo
+ccrypt -c		-Ler arquivo criptografado
+ccrypt -d		-tira o criptografado
+ccrypt -r		-criptografa o diretorio
+ccrypt -d-r		-tira a criptografia do diretorio

@@ -1,0 +1,14 @@
+instalar a biblioteca mysql.connector
+	pip install mysql.connector(CMD)
+
+logar a API com sua conta mysql(main.py)
+	nome do data base
+
+criar tabelas no mysql
+
+configurar as tabelas mysql na API(mysql.py)
+	arrumar nome de tabela
+	adicionar 'auth_plugin='mysql_native_password' no self.mysql(linha 17)
+
+EXECUTAR NO MAIN
+

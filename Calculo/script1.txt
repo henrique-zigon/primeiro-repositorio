@@ -1,0 +1,252 @@
+
+C:\Users\User>py
+Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:43:08) [MSC v.1926 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print('\n'*100)
+>>> type(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> a=4
+>>> if(a>2):
+... print("ok")
+  File "<stdin>", line 2
+    print("ok")
+    ^
+IndentationError: expected an indented block
+>>> if(a>2):
+...     print("ok")
+...
+ok
+>>> #
+>>> print('\n'*50)
+
+
+Exercicio1:
+>>> a=2
+>>> pot2=a**2
+>>> pot3=a**3
+>>> pot4=a**4
+>>> print('potencia 2',pot2)
+potencia 2 4
+>>> print('potencia 3',pot3)
+potencia 3 8
+>>> print('potencia 4',pot4)
+potencia 4 16
+
+>>> c=4
+>>> d=5
+>>> c_quad=pow(c,2)
+>>> c_cubo=pow(c,3)
+>>> c_quat=pow(c,4)
+>>> c_ad=pow(c,d)
+>>> print("quadrad",c_quad)
+quadrad 16.0
+>>> print("cubo",c_cubo)
+cubo 64.0
+>>> print("quarta",c_quat)
+quarta 256.0
+>>> print("a d",c_ad)
+a d 1024.0
+
+Exercicio2:
+>>> x=512
+>>> raiz2=pow(x,1/2)
+>>> raiz3=pow(x,1/3)
+>>> raiz4=pow(x,1/4)
+>>> print("raiz2",raiz2)
+raiz2 22.627416997969522
+>>> print("raiz3",raiz3)
+raiz3 7.999999999999999
+>>> print("raiz4",raiz4)
+raiz4 4.756828460010884
+
+
+Exercicio3:
+>>> w=3345.61
+>>> from math import floor
+>>> from math import ceil
+>>> a=floor(w)
+>>> b=ceil(w)
+>>> c=round(w,1)
+>>> a
+3345
+>>> b
+3346
+>>> c
+3345.6
+
+
+
+Exercicio5
+>>> x1=1.146
+>>> x2=3.678
+>>> x3=7.5
+>>> g=round(x1)
+>>> h=round(x2)
+>>> i=round(x3)
+>>> h
+4
+>>> g
+1
+>>> i
+8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>> #atribuir valores inteiros para duas variaveis
+>>> a=6
+>>> b=3
+>>> #vamos fazer oprações mais elaboradas utilizando operadores simples
+>>> soma=a+b
+>>> subtracao=a-b
+>>> multiplicacao=a*b
+>>> divisao=a/b
+>>> print("vamos mostrar todos os resultados")
+vamos mostrar todos os resultados
+>>> print("a=",a)
+a= 6
+>>> print("b=",b)
+b= 3
+>>> print('a+b=',soma)
+a+b= 9
+>>> print('a-b=',subtração)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'subtração' is not defined
+>>> print('a-b=',subtracao)
+a-b= 3
+>>> print('a*b=',multiplicacao)
+a*b= 18
+>>> print('a/b=',divisao)
+a/b= 2.0
+>>> print('\n'*50)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>> a1=6.5
+>>> b1=2.5
+>>> a=5
+>>> a=25
+>>> b=2
+>>> b=1/2
+>>> c=a**b
+>>> c
+5.0
+>>> a=27
+>>> c
+5.0
+>>> c=a**b
+>>> c
+5.196152422706632
+>>> b=1/3
+>>> c=a**b
+>>> c
+3.0
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> a=16
+>>> b=1/4
+>>> c=a**b
+>>> c
+2.0
+>>>

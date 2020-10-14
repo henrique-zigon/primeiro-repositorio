@@ -1,0 +1,32 @@
+saber oq é (root@Henrique:~#)
+	root -usuário logado
+	@Henrique: -nome da maquina
+	~ -pasta do usuário que está logado, quando mostra o ~, é pq ele esta na pasta do usuario
+	# -usuario root
+	$ -usuario comum
+
+
+sudo- é a plavara que dá permissão de super usuario(root)
+	apens usuarios "suduoers" podem usar sudo
+
+pwd- comando que mostra a pasta que voce está
+
+adduser nome- cria um usuário (só roda c sudo ou root)
+
+su nome- muda o usuario que está usando
+
+cd- só "cd" direciona a pasta "~"
+cd nome- direciona a pasta desejada
+
+ls- ve o conteudo da pasta
+dir- igual a ls, porém é nativo do windows
+
+mkdir nome- cria uma pasta
+rmdir nome- remove a pasta
+
+exit- sai do usuário e passa a ser o root
+su- só o "su" ele vai pro root, mas tb da pra ir usando "su root"
+
+passwd root- muda a senha do root
+
+lscpu- da informações da maquina

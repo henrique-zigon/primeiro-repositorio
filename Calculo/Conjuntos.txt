@@ -1,0 +1,103 @@
+Um conjunto é uma variavel que dentro dele possui diversos valores.Os conjunto não segue ordenações.Exepmlo:
+>>> SalaGerente = {'iluminacao=75W','computadores=300W','impressora=45W','telefone=15W'}
+>>> SalaGerente
+{'impressora=45W', 'computadores=300W', 'telefone=15W', 'iluminacao=75W'}
+
+Podemos ver que a ordem foi alterada,isso por causa que o conjunto salva aleatoriamente as informações, então quando for consultar os dados dos conjuntos
+Eles por sua vez podem vir em diferentes ordens.
+
+
+>>> Escritorio = {'impressora=45W','iluminacao=75W','computadores=1000W','impressora=45W','telefone=15W','ar_condicionado=1400W','cafeteira=600W'}
+>>> Salareuniao = {'iluminacao=75W','projetor=350W','computadores=300W','ar_condicionado=1400W'}
+>>> Hall = {'computadores=600W','iluminacao=75W','telefone=15W','ar_condicionado=1400W','televisao=280W'}
+
+#UNIAO#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Uniao é quando você pega 2 ou mais conjuntos para verificar os elementos únicos.Exemplo:
+Escritorio = {'impressora=45W','iluminacao=75W','computadores=1000W','impressora=45W','telefone=15W','ar_condicionado=1400W','cafeteira=600W'}
+Hall = {'computadores=600W','telefone=15W','ar_condicionado=1400W','iluminacao=75W','televisao=280W'}
+>>> UniaoEscritorioHall = Escritorio | Hall
+ou
+>>> UniaoEscritorioHall2 = Escritorio.union(Hall)
+>>> UniaoEscritorioHall
+{'televisao=280W', 'impressora=45W', 'ar_condicionado=1400W', 'computadores=600W', 'cafeteira=600W', 'computadores=1000W', 'telefone=15W', 'iluminacao=75W'}
+>>> UniaoEscritorioHall2
+{'televisao=280W', 'impressora=45W', 'ar_condicionado=1400W', 'computadores=600W', 'cafeteira=600W', 'computadores=1000W', 'telefone=15W', 'iluminacao=75W'}
+
+Com o uso da Uniao 'union' '|' ,ela pega os 2 conjuntos e todos os seus elementos unicos,não tendo assim a repetição, como no exemplo do telefone=15W,iluminacao=75W e ar_condicionado=1400W,mesmo que na hora de criar o conjunto estavam em posições/ordens diferentes, o python já considera como mesmo elemento logo não repete
+
+#Interseccao----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interseccao é quando você pega 2 ou mais conjuntos para verificar os elementos em comun. Exemplo:
+>>> SalaGerente = {'iluminacao=75W','computadores=300W','impressora=45W','telefone=15W'}
+>>> Salareuniao = {'iluminacao=75W','projetor=350W','computadores=300W','ar_condicionado=1400W'}
+
+InterseccaoSalaGerenteSalareuniao = SalaGerente & Salareuniao
+InterseccaoSalaGerenteSalareuniao2 = SalaGerente.intersection(Salareuniao)
+
+>>> InterseccaoSalaGerenteSalareuniao
+{'iluminacao=75W', 'computadores=300W'}
+>>> InterseccaoSalaGerenteSalareuniao2
+{'iluminacao=75W', 'computadores=300W'}
+
+Podemos ver que apenas os elementos que está nos 2 conjuntos foi apresentado
+
+#Diferença----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Diferença é quando você compara o que o 1° conjunto tem que os demais não tem.Exemplo:
+	Hall = {'computadores=600W','iluminacao=75W','telefone=15W','ar_condicionado=1400W','televisao=280W'}
+	Salareuniao = {'iluminacao=75W','projetor=350W','computadores=300W','ar_condicionado=1400W'}
+
+DiferencaHallparaSalareuniao = Hall-Salareuniao
+
+>>> DiferencaHallparaSalareuniao
+{'televisao=280W', 'telefone=15W', 'computadores=600W'}
+
+Podemos ver que no Hall possui televisão=280W,telefone=15W e computadores=600W a mais que a Salareuniao
+se fizermos acontrário
+
+ 
+DiferencasalareuniaoparaHall = Salareuniao-Hall
+>>> DiferencasalareuniaoparaHall
+{'projetor=350W', 'computadores=300W'}
+
+nesse caso retornou o projeto=350W e computadores=300W que o Hall não possui
+#Pertinência-----------------------------------------------------------------------------------------------
+
+Pertinência é o operador que diz se há ao não um elemento dentro de um conjunto.Exemplo:
+	Escritorio = {'impressora=45W','iluminacao=75W','computadores=1000W','impressora=45W','telefone=15W','ar_condicionado=1400W','cafeteira=600W'}
+
+	'impressora=45W' in Escritorio
+	True
+
+Este retorna "true" pois a expressão é verdadeira, caso contrario, daria "false", como no exemplo a seguir:
+	Escritorio = {'impressora=45W','iluminacao=75W','computadores=1000W','impressora=45W','telefone=15W','ar_condicionado=1400W','cafeteira=600W'}
+
+	'televisão=280W' in Escritorio
+	False
+#Subconjunto-----------------------------------------------------------------------------------------------
+
+Subconjunto é quando há todos os elementos do conjunto, presente dentro de um outro conjunto. E um superconjunto é quando dentro do conjunto, há todos os elementos de um outro conjunto, dentro dele.
+Exemplo:
+	Escritorio = {'impressora=45W','iluminacao=75W','computadores=1000W','impressora=45W','telefone=15W','ar_condicionado=1400W','cafeteira=600W'}
+	Banheiro={'iluminacao=75W','ar_condicionado=1400W'}
+
+	Banheiro.issubset(Escritorio)
+	True
+	Escritorio.issuperset(Banheiro)
+	False
+#Igualdade-----------------------------------------------------------------------------------------------
+
+Igualdade compara os elementos dentro de um conjunto, retornando true se todos eles forem iguais.Exemplo:
+	BanheiroTerreo={'iluminacao=75W','ar_condicionado=1400W'}
+	Banheiro={'iluminacao=75W','ar_condicionado=1400W'}
+
+	Banheiro==BanheiroTerreo
+	True
+#Diferença Simetrica-----------------------------------------------------------------------------------------------
+
+Este, cria um conjunto dos elementos unicos dentro da junção de 2 ou mais conjuntos. Exemplo:
+	Hall = {'computadores=600W','iluminacao=75W','telefone=15W','ar_condicionado=1400W','televisao=280W'}
+	Salareuniao = {'iluminacao=75W','projetor=350W','computadores=300W','ar_condicionado=1400W'}
+
+	Hall^Salareuniao
+	{'computadores=300W', 'projetor=350W', 'televisao=280W', 'computadores=600W', 'telefone=15W'}
