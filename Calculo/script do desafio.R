@@ -51,11 +51,12 @@ pie(preçosSeparados)
 
 #----------------------------------------------------
 
-#Juros do billing
-#Levando em consideração que o montante final seja o mesmo o que o estipulado
-montante1mes<-equacao*(1+0.1)**1
-montante1mes
-#previsao de dezembro
-equacao1<-0.5636*12+64.6
-montante2mes<-(montante1mes*(1+0.1)**2)+equacao1
-montante2mes
+#Juros do billing(10%) de Janeiro até o mes previsto
+capi<-0
+for (i in meses1) {
+  capi<-preços1[i]+capi
+  montante=capi*(1+0.1)**i
+}
+montante
+#Estimativa de preço sem juros p/ comparação
+sum(preços1)
