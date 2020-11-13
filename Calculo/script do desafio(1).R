@@ -19,3 +19,5 @@ barplot(prop.table(tabelaFinal$freq_relativa),xlab="idade",ylab="Frequência
 + Relativa",col=c("red","blue"))
 
 #-----------------RENDA MENSAL----------------------
+hist(prop.table(tabelaFinal$faixaIdade),xlab="idade",ylab="Frequência
++ Relativa",col=c("red","blue"))
