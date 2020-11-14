@@ -53,13 +53,14 @@ pie(preçosSeparados)
 
 #Juros Compostos do billing(10%) de Janeiro até o mes previsto
 tabelaJuros<-data.frame("mes","preço sem Juros","JurosCompostos")
-capi<-0
+dividaJaneiro<-0
 montante<-0
 for (i in tabela1$meses1) {
   montante=tabela1$preços1[i]*(1+0.1)**i
-  capi=capi+montante
   tabelaJuros[i,]<-data.frame(mes=i,preçosSemJuros=tabela1$preços1[i],preçosJC=round(montante,2),stringsAsFactors = FALSE)
 }
-montante
+tabelaJuros
 #Estimativa de preço sem juros p/ comparação
-sum(preços1)
+sum(tabela1$preços1)
+#Soma dos meses com juros compostos se pagar em novembro
+sum(as.double(tabelaJuros$X.JurosCompostos.[1:10]))+as.double(tabelaJuros$X.preço.sem.Juros.[11]) 
