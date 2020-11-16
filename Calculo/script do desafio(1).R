@@ -1,23 +1,19 @@
 set.seed(999)
 n<-6048
 
-#-----------------IDADE--------------------------------
-faixaIdade<-abs(round(rnorm(n,23,5),0))
-
-data.default<-data.frame(table(faixaIdade))
-data.default<-data.frame(id=(1:length(data.default$Freq)),data.default)
-
-freq_relativa<-round((data.default$Freq/sum(data.default$Freq)*100),2)
-
-data.freq<-data.frame(freq_relativa)
-data.freq<-data.frame(id=(1:length(data.freq$freq_relativa)),freq_relativa)
-
-tabelaFinal<-data.frame(merge(data.default,data.freq))
-
-barplot(tabelaFinal$freq_relativa,xlab= "idade",ylab="Frequência_Relativa")
-barplot(prop.table(tabelaFinal$freq_relativa),xlab="idade",ylab="Frequência
-+ Relativa",col=c("red","blue"))
-
-#-----------------RENDA MENSAL----------------------
-hist(prop.table(tabelaFinal$faixaIdade),xlab="idade",ylab="Frequência
-+ Relativa",col=c("red","blue"))
+#-----------------Padrão--------------------------------
+bom.n<-rbinom(n,1,.85)
+class_pg<-factor(bom.n,levels=c(0,1),labels=c("mau","bom"),ordered =TRUE)
+data.default<-data.frame(class_pg)
+data.default<-data.frame(table(class_pg))
+names(data.default) [grep('Freq',names(data.default))]<-'Freq_absoluta'
+data.default<-data.frame(id=1:2,data.default)
+Freq_relativa<-round(data.default$Freq_absoluta/sum(data.default$Freq_absoluta)*100,2)
+Freq_relativa<-data.frame(id=1:2,Freq_relativa)
+table_padrão<-data.frame(merge(data.default,Freq_relativa))
+barplot(table_padrão$Freq_relativa,xlab= "Tipo de Tomador Crédito",ylab="Frequência_Relativa",col=c("seagreen", "yellowgreen"))
+#--------------Parte a se fazer-------------------------
+rendaMensal<-abs(round(rnorm(n,1000,5),0))
+idade<-abs(round(rnorm(n,23,1),0))
+tabelaFinal<-data.frame(class_pg,rendaMensal,idade)
+plot(lm(idade~rendaMensal))
