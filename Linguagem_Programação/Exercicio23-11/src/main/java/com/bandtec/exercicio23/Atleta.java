@@ -16,6 +16,9 @@ public abstract class Atleta {
     public void hidratar(String atletaDaVez){
         System.out.println(atletaDaVez+" se hidratando");
     }
+    public void gritar(){
+        System.out.println("O importante é competir");
+    }
     //---------------------------------ABSTRATOS
     public abstract void treinar();
     public abstract void praticar();

@@ -46,6 +46,10 @@ public class ProgramaEsporte {
         velocista.treinar();
         velocista.treinar();
         velocista.treinar();
-
+        System.out.println("------------------------------------");
+        ciclista.gritar();
+        maratonista.gritar();
+        nadador.gritar();
+        velocista.gritar();
     }
 }
